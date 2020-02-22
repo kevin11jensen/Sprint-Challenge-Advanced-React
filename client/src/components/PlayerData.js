@@ -18,14 +18,20 @@ export default class PlayerData extends React.Component {
     }
 
     render() {
-        return 
+        return (
             <div>
                 {this.state.loading || !this.state.player ? (
                     <div>loading...</div>
                 ) : (
-                    <div>player..</div>
+                    <div>
+                        <div>{this.state.player.name}</div>
+                        <div>{this.state.player.country}</div>
+                        <div>{this.state.player.searches}</div>
+                    </div>
                 )}
             </div>
+        )
+            
     }
 
 }
