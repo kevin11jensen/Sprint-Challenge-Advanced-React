@@ -8,7 +8,7 @@ const Navigation = () => {
         <nav>
             <h1>Womens World Cup</h1>
             <button 
-            className='dark-mode__toggle'
+            className='dark-mode'
             onClick={toggleMode}
             className={darkMode ? 'toggle toggled' : 'toggle'}
             >
