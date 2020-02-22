@@ -3,26 +3,23 @@ import React from 'react';
 const PlayerCard = props => {
     return (
         <div>
-            <div>
-
-                {props.player.map(item => {
-                    return (
+            {props.player.map(item => {
+                return (
+                    <div>
                         <div>
-                            <div>
                             Name: {item.name}
-                                </div>
-                                <div>
+                        </div>
+                        <div>
                             Country: {item.country}
-                                </div>
-                                <div>
+                        </div>
+                        <div>
                             Searches: {item.searches}
-                                </div>
-                            </div>
+                        </div>
+                    </div>
                     );
                 })}
             </div>
 
-        </div>
     )
 }
 

@@ -9,14 +9,14 @@ export const useDarkMode = (key, initialValue) => {
         setDarkMode(!darkMode);
     }
     useEffect(() => {
-        if(darkMode === false) {
+        if(darkMode === false){
             document.body.className = '';
-
-        }if(darkMode === true) {
+        }if(darkMode === true){
             document.body.className = 'dark-mode';
         }
-    }, [darkMode], 
+    }, 
+    [darkMode], 
     )
 
-    return [darkMode, toggleMode]
+    return [darkMode, toggleMode];
 }

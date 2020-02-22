@@ -36,7 +36,7 @@ class App extends Component() {
     })
   }
 
-  getPlayer = e => {
+  fetchPlayer = e => {
     e.preventDefault()
     axios
     .get(`http://localhost:5000/api/${this.state.playerText}`)
@@ -50,21 +50,21 @@ class App extends Component() {
   }
 
   render(){
-
+    return (
+      <div className="App">
+        <Navigation />
+        <InputForm 
+          updateText={this.state.playerText}
+          changeHandler={this.handleChanges}
+          fetch={this.fetchPlayer}
+        />
+        <PlayerCard
+        player={this.state.player}
+        />
+        </div>
+    )
   }
-  return (
-    <div className="App">
-    <Navigation />
-      <InputForm 
-      updateText={this.state.playerText}
-      changeHandler={this.handleChanges}
-      get={this.getPlayer}
-      />
-      <PlayerCard
-      player={this.state.player}
-      />
-    </div>
-  );
 }
+  
 
 export default App;
