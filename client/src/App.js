@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
+import Navigation from './components/Navigation';
 import InputForm from './components/InputForm';
+import PlayerCard from './components/PlayerCard';
 import './App.css';
 
 class App extends Component() {
@@ -52,10 +54,14 @@ class App extends Component() {
   }
   return (
     <div className="App">
+    <Navigation />
       <InputForm 
       updateText={this.state.playerText}
       changeHandler={this.handleChanges}
       get={this.getPlayer}
+      />
+      <PlayerCard
+      player={this.state.player}
       />
     </div>
   );
